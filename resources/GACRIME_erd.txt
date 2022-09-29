@@ -1,0 +1,34 @@
+County
+--
+countyid
+county_name
+
+Agency
+--
+agencyid 
+agency_name
+ori
+latitude
+longitude
+
+CountyAgency
+--
+countyagencyid 
+agencyid FK >- Agency.agencyid
+countyid FK >- County.countyid
+
+Offense
+--
+offenseid
+ori FK >- Agency.ori
+data_year
+cleared
+actual
+
+
+Income
+--
+incomeid
+countyid FK >- County.countyid
+household_income
+income_year
