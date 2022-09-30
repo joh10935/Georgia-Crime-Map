@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="bootstrap.css" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navigation Bar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="leaflet.html">Leaflet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="graph.html">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div class="container">
+    <br>
+        <img src="GA_county_map.png" width="600" height= "550" alt="" class ="centerImage">
+    </br>
+    </div>
+    <!-- copy from intro and make the picture bigger on the left container instead of text and right should stay the same but add outlier-->
+    <!-- below is left side -->
+    <div class="container">
+      <br>
+      <section class="row">
+        <!-- left side -->
+        <div class="col-md-8 divbdy">
+          <article class="description-content">
+          <br>
+          <h1 class="description-header">Summary: </h1>
+          <hr>
+          <img src="assets/Images/Latitude_Temp.png" alt="" class="imageNav-photo"/>
+          <hr>
+        </article>
+        </div>
+
+    <!-- On the right side, will stay the same except below -->
+    <div class="col-md-4">
+      <section id="imageNav-area">
+        <h2 class="imageNav-header">Visualizations</h2>
+          <hr>
+          <div class="row">
+              <div class="col-3 col-md-6">
+                <a href="temp.html"><img src="assets/Images/Latitude_Temp.png" alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
+              </div>
+             
+              <div class="col-3 col-md-6">
+                <a href="humidity.html"><img src="assets/Images/Latitude_Humidity.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
+              </div>
+          
+              <div class="col-3 col-md-6">
+                <a href="cloudiness.html"><img src="assets/Images/Latitude_Cloudiness.png" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
+              </div>
+              
+              <div class="col-3 col-md-6">
+                <a href="wind.html"><img src="assets/Images/Latitude_Windspeed.png" alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
+              </div>
+          </div>
+      </div>
+  </div>            
+</div>    
+
+</section>
+    <!-- End of container -->
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        <b>&copy; Copyright Coding Bootcamp 2021</b>
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
