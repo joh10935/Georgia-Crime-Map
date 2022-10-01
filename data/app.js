@@ -1,11 +1,8 @@
-function demoInfo(data) {
-  d3.json("GA_crimeData.json").then((data) => {
-    console.log(data.results.ori);
-    //let metaData = data.metadata;
-    let results = data.results;
-    let result = results.filter((sampleResult) => sampleResult.ori == sample);
+function demoInfo(agencyName) {
+  d3.json("GA_Counties_Income_Data.json").then((data) => {
+    let result = data.filter((agency) => agency["Agency Name"] === agencyName);
     let resultData = result[0];
-    console.log(resultData);
+
     d3.select("#sample-metadata").html("");
     Object.entries(resultData).forEach(([key, value]) => {
       d3.select("#sample-metadata").append("h5").text(`${key}: ${value}`);
@@ -15,15 +12,15 @@ function demoInfo(data) {
 
 function initialize() {
   let select = d3.select("#selDataset");
-  d3.json("GA_crimeData.json").then((data) => {
-    let sampleNames = data.results;
-    console.log(data);
-
-    sampleNames.forEach((sample) => {
-      select.append("option").text(sample).property("value", sample);
+  d3.json("GA_Counties_Income_Data.json").then((data) => {
+    data.forEach((sample) => {
+      select
+        .append("option")
+        .text(sample["Agency Name"])
+        .property("value", sample["Agency Name"]);
     });
-    let sample1 = sampleNames[0];
-    demoInfo(sample1);
+
+    demoInfo(data[0]["Agency Name"]);
   });
 }
 
@@ -31,3 +28,9 @@ function optionChanged(item) {
   demoInfo(item);
 }
 initialize();
+
+// data.forEach((item) => {
+//   if(item['name']===name){
+//     result.push(item);
+//   }
+// })

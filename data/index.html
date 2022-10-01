@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+
+    <!-- Our own CSS stylesheet -->
   </head>
 
   <body>
@@ -35,22 +37,23 @@
             <div id="sample-metadata" class="panel-body"></div>
           </div>
         </div>
-        <div class="col-md-5">
-          <div id="bar"></div>
-        </div>
+
         <div class="col-md-5">
           <div id="gauge"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="bubble"></div>
-        </div>
-      </div>
-    </div>
 
+      <div id="map-id"></div>
+    </div>
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="app.js"></script>
+    <script src="logic.js"></script>
   </body>
 </html>
