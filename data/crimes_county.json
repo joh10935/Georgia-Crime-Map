@@ -1,0 +1,1580 @@
+{
+    "schema": {
+        "fields": [
+            {
+                "name": "county_name",
+                "type": "string"
+            },
+            {
+                "name": "offenseid",
+                "type": "integer"
+            },
+            {
+                "name": "data_year",
+                "type": "integer"
+            },
+            {
+                "name": "cleared",
+                "type": "integer"
+            },
+            {
+                "name": "actual",
+                "type": "integer"
+            },
+            {
+                "name": "agencyid",
+                "type": "integer"
+            }
+        ],
+        "primaryKey": [
+            "county_name"
+        ],
+        "pandas_version": "0.20.0"
+    },
+    "data": [
+        {
+            "county_name": "",
+            "offenseid": 862074,
+            "data_year": 72648,
+            "cleared": 60,
+            "actual": 102,
+            "agencyid": 8388
+        },
+        {
+            "county_name": "APPLING",
+            "offenseid": 14196,
+            "data_year": 339072,
+            "cleared": 1168,
+            "actual": 4230,
+            "agencyid": 13236
+        },
+        {
+            "county_name": "ATKINSON",
+            "offenseid": 14724,
+            "data_year": 145344,
+            "cleared": 94,
+            "actual": 418,
+            "agencyid": 29088
+        },
+        {
+            "county_name": "BACON",
+            "offenseid": 23730,
+            "data_year": 169536,
+            "cleared": 747,
+            "actual": 2480,
+            "agencyid": 2076
+        },
+        {
+            "county_name": "BAKER",
+            "offenseid": 12330,
+            "data_year": 72672,
+            "cleared": 0,
+            "actual": 2,
+            "agencyid": 10248
+        },
+        {
+            "county_name": "BALDWIN",
+            "offenseid": 74676,
+            "data_year": 339108,
+            "cleared": 2970,
+            "actual": 11930,
+            "agencyid": 36840
+        },
+        {
+            "county_name": "BANKS",
+            "offenseid": 26520,
+            "data_year": 96888,
+            "cleared": 839,
+            "actual": 3164,
+            "agencyid": 2208
+        },
+        {
+            "county_name": "BANKS; HABERSHAM",
+            "offenseid": 1041378,
+            "data_year": 169536,
+            "cleared": 89,
+            "actual": 339,
+            "agencyid": 2352
+        },
+        {
+            "county_name": "BANKS; JACKSON",
+            "offenseid": 672216,
+            "data_year": 96888,
+            "cleared": 18,
+            "actual": 94,
+            "agencyid": 17136
+        },
+        {
+            "county_name": "BARROW",
+            "offenseid": 77676,
+            "data_year": 242184,
+            "cleared": 738,
+            "actual": 9572,
+            "agencyid": 45720
+        },
+        {
+            "county_name": "BARROW; HALL; JACKSON; GWINNETT",
+            "offenseid": 677400,
+            "data_year": 96888,
+            "cleared": 256,
+            "actual": 957,
+            "agencyid": 3264
+        },
+        {
+            "county_name": "BARTOW",
+            "offenseid": 264750,
+            "data_year": 605532,
+            "cleared": 1802,
+            "actual": 11881,
+            "agencyid": 52836
+        },
+        {
+            "county_name": "BEN HILL",
+            "offenseid": 103728,
+            "data_year": 193776,
+            "cleared": 1120,
+            "actual": 5349,
+            "agencyid": 12576
+        },
+        {
+            "county_name": "BERRIEN",
+            "offenseid": 220194,
+            "data_year": 363312,
+            "cleared": 828,
+            "actual": 3894,
+            "agencyid": 29472
+        },
+        {
+            "county_name": "BIBB",
+            "offenseid": 329802,
+            "data_year": 460200,
+            "cleared": 3791,
+            "actual": 58717,
+            "agencyid": 57084
+        },
+        {
+            "county_name": "BLECKLEY",
+            "offenseid": 235080,
+            "data_year": 290664,
+            "cleared": 641,
+            "actual": 2196,
+            "agencyid": 26880
+        },
+        {
+            "county_name": "BRANTLEY",
+            "offenseid": 211740,
+            "data_year": 242184,
+            "cleared": 488,
+            "actual": 2944,
+            "agencyid": 27984
+        },
+        {
+            "county_name": "BROOKS",
+            "offenseid": 179760,
+            "data_year": 193764,
+            "cleared": 961,
+            "actual": 3172,
+            "agencyid": 24564
+        },
+        {
+            "county_name": "BROOKS; THOMAS",
+            "offenseid": 251502,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 5112
+        },
+        {
+            "county_name": "BRYAN",
+            "offenseid": 286920,
+            "data_year": 290664,
+            "cleared": 1524,
+            "actual": 4827,
+            "agencyid": 46656
+        },
+        {
+            "county_name": "BULLOCH",
+            "offenseid": 414816,
+            "data_year": 387528,
+            "cleared": 3635,
+            "actual": 8912,
+            "agencyid": 48828
+        },
+        {
+            "county_name": "BURKE",
+            "offenseid": 393204,
+            "data_year": 339108,
+            "cleared": 679,
+            "actual": 4208,
+            "agencyid": 66216
+        },
+        {
+            "county_name": "BURKE; RICHMOND",
+            "offenseid": 921048,
+            "data_year": 96888,
+            "cleared": 2,
+            "actual": 22,
+            "agencyid": 3072
+        },
+        {
+            "county_name": "BUTTS",
+            "offenseid": 207186,
+            "data_year": 169536,
+            "cleared": 2261,
+            "actual": 3871,
+            "agencyid": 14736
+        },
+        {
+            "county_name": "CALHOUN",
+            "offenseid": 279342,
+            "data_year": 217968,
+            "cleared": 8,
+            "actual": 88,
+            "agencyid": 20100
+        },
+        {
+            "county_name": "CAMDEN",
+            "offenseid": 226338,
+            "data_year": 169524,
+            "cleared": 16,
+            "actual": 2515,
+            "agencyid": 20544
+        },
+        {
+            "county_name": "CANDLER",
+            "offenseid": 267312,
+            "data_year": 193776,
+            "cleared": 258,
+            "actual": 1662,
+            "agencyid": 21984
+        },
+        {
+            "county_name": "CARROLL",
+            "offenseid": 943356,
+            "data_year": 629736,
+            "cleared": 3808,
+            "actual": 18925,
+            "agencyid": 109980
+        },
+        {
+            "county_name": "CARROLL; HARALSON",
+            "offenseid": 615768,
+            "data_year": 96888,
+            "cleared": 560,
+            "actual": 2035,
+            "agencyid": 3360
+        },
+        {
+            "county_name": "CATOOSA",
+            "offenseid": 313392,
+            "data_year": 193776,
+            "cleared": 1596,
+            "actual": 5984,
+            "agencyid": 26976
+        },
+        {
+            "county_name": "CHARLTON",
+            "offenseid": 407580,
+            "data_year": 242220,
+            "cleared": 616,
+            "actual": 1611,
+            "agencyid": 22104
+        },
+        {
+            "county_name": "CHATHAM",
+            "offenseid": 2012310,
+            "data_year": 1089972,
+            "cleared": 13511,
+            "actual": 62599,
+            "agencyid": 201948
+        },
+        {
+            "county_name": "CHATTAHOOCHEE",
+            "offenseid": 48030,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 1272
+        },
+        {
+            "county_name": "CHATTOOGA",
+            "offenseid": 438750,
+            "data_year": 217968,
+            "cleared": 436,
+            "actual": 2097,
+            "agencyid": 39768
+        },
+        {
+            "county_name": "CHEROKEE",
+            "offenseid": 1280814,
+            "data_year": 605532,
+            "cleared": 5847,
+            "actual": 19352,
+            "agencyid": 61584
+        },
+        {
+            "county_name": "CHEROKEE; PICKENS",
+            "offenseid": 52206,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 4824
+        },
+        {
+            "county_name": "CLARKE",
+            "offenseid": 703014,
+            "data_year": 314844,
+            "cleared": 5620,
+            "actual": 38206,
+            "agencyid": 55428
+        },
+        {
+            "county_name": "CLAY",
+            "offenseid": 221208,
+            "data_year": 96888,
+            "cleared": 66,
+            "actual": 237,
+            "agencyid": 5712
+        },
+        {
+            "county_name": "CLAYTON",
+            "offenseid": 1732500,
+            "data_year": 726624,
+            "cleared": 12505,
+            "actual": 94155,
+            "agencyid": 94020
+        },
+        {
+            "county_name": "CLAYTON; FULTON",
+            "offenseid": 466008,
+            "data_year": 96888,
+            "cleared": 1577,
+            "actual": 9960,
+            "agencyid": 6336
+        },
+        {
+            "county_name": "CLINCH",
+            "offenseid": 422898,
+            "data_year": 169536,
+            "cleared": 531,
+            "actual": 1090,
+            "agencyid": 16512
+        },
+        {
+            "county_name": "COBB",
+            "offenseid": 2238186,
+            "data_year": 847752,
+            "cleared": 27595,
+            "actual": 131129,
+            "agencyid": 105420
+        },
+        {
+            "county_name": "COFFEE",
+            "offenseid": 740586,
+            "data_year": 266460,
+            "cleared": 26329,
+            "actual": 4538,
+            "agencyid": 34212
+        },
+        {
+            "county_name": "COLQUITT",
+            "offenseid": 1037970,
+            "data_year": 363324,
+            "cleared": 599,
+            "actual": 5863,
+            "agencyid": 49440
+        },
+        {
+            "county_name": "COLQUITT; TIFT",
+            "offenseid": 1012056,
+            "data_year": 96888,
+            "cleared": 88,
+            "actual": 309,
+            "agencyid": 20112
+        },
+        {
+            "county_name": "COLUMBIA",
+            "offenseid": 709980,
+            "data_year": 242184,
+            "cleared": 2216,
+            "actual": 10920,
+            "agencyid": 27324
+        },
+        {
+            "county_name": "COOK",
+            "offenseid": 944502,
+            "data_year": 314880,
+            "cleared": 573,
+            "actual": 2833,
+            "agencyid": 31320
+        },
+        {
+            "county_name": "COWETA",
+            "offenseid": 1120050,
+            "data_year": 363312,
+            "cleared": 6232,
+            "actual": 22351,
+            "agencyid": 56280
+        },
+        {
+            "county_name": "COWETA; FULTON",
+            "offenseid": 481560,
+            "data_year": 96888,
+            "cleared": 309,
+            "actual": 860,
+            "agencyid": 20256
+        },
+        {
+            "county_name": "CRAWFORD",
+            "offenseid": 457092,
+            "data_year": 145332,
+            "cleared": 509,
+            "actual": 1732,
+            "agencyid": 18312
+        },
+        {
+            "county_name": "CRISP",
+            "offenseid": 617520,
+            "data_year": 193776,
+            "cleared": 2626,
+            "actual": 7437,
+            "agencyid": 13968
+        },
+        {
+            "county_name": "DADE",
+            "offenseid": 390630,
+            "data_year": 121080,
+            "cleared": 184,
+            "actual": 228,
+            "agencyid": 24900
+        },
+        {
+            "county_name": "DAWSON",
+            "offenseid": 236106,
+            "data_year": 72648,
+            "cleared": 672,
+            "actual": 2641,
+            "agencyid": 5688
+        },
+        {
+            "county_name": "DECATUR",
+            "offenseid": 1362414,
+            "data_year": 411744,
+            "cleared": 1338,
+            "actual": 6394,
+            "agencyid": 19752
+        },
+        {
+            "county_name": "DEKALB",
+            "offenseid": 4871790,
+            "data_year": 1380552,
+            "cleared": 18510,
+            "actual": 194873,
+            "agencyid": 145896
+        },
+        {
+            "county_name": "DEKALB; FULTON",
+            "offenseid": 1147416,
+            "data_year": 96888,
+            "cleared": 25242,
+            "actual": 162716,
+            "agencyid": 1392
+        },
+        {
+            "county_name": "DODGE",
+            "offenseid": 721200,
+            "data_year": 193776,
+            "cleared": 595,
+            "actual": 5100,
+            "agencyid": 17136
+        },
+        {
+            "county_name": "DOOLY",
+            "offenseid": 638610,
+            "data_year": 169536,
+            "cleared": 408,
+            "actual": 1082,
+            "agencyid": 35712
+        },
+        {
+            "county_name": "DOUGHERTY",
+            "offenseid": 2052996,
+            "data_year": 532848,
+            "cleared": 7227,
+            "actual": 39990,
+            "agencyid": 26508
+        },
+        {
+            "county_name": "DOUGLAS",
+            "offenseid": 763824,
+            "data_year": 193776,
+            "cleared": 5519,
+            "actual": 27401,
+            "agencyid": 17088
+        },
+        {
+            "county_name": "DOUGLAS; CARROLL",
+            "offenseid": 141144,
+            "data_year": 96888,
+            "cleared": 1837,
+            "actual": 4528,
+            "agencyid": 29568
+        },
+        {
+            "county_name": "DOUGLAS; COBB",
+            "offenseid": 247128,
+            "data_year": 96888,
+            "cleared": 497,
+            "actual": 1051,
+            "agencyid": 1776
+        },
+        {
+            "county_name": "EARLY",
+            "offenseid": 773040,
+            "data_year": 193776,
+            "cleared": 632,
+            "actual": 2082,
+            "agencyid": 11664
+        },
+        {
+            "county_name": "EARLY; CALHOUN",
+            "offenseid": 92250,
+            "data_year": 72648,
+            "cleared": 76,
+            "actual": 166,
+            "agencyid": 828
+        },
+        {
+            "county_name": "ECHOLS",
+            "offenseid": 389976,
+            "data_year": 96888,
+            "cleared": 52,
+            "actual": 260,
+            "agencyid": 9120
+        },
+        {
+            "county_name": "EFFINGHAM",
+            "offenseid": 1482930,
+            "data_year": 363312,
+            "cleared": 1837,
+            "actual": 5820,
+            "agencyid": 65256
+        },
+        {
+            "county_name": "ELBERT",
+            "offenseid": 804144,
+            "data_year": 193776,
+            "cleared": 817,
+            "actual": 3823,
+            "agencyid": 18576
+        },
+        {
+            "county_name": "EMANUEL",
+            "offenseid": 1635936,
+            "data_year": 387528,
+            "cleared": 1018,
+            "actual": 3854,
+            "agencyid": 76956
+        },
+        {
+            "county_name": "EMANUEL; JOHNSON",
+            "offenseid": 175470,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 72
+        },
+        {
+            "county_name": "EVANS",
+            "offenseid": 1041180,
+            "data_year": 242184,
+            "cleared": 148,
+            "actual": 964,
+            "agencyid": 22584
+        },
+        {
+            "county_name": "FANNIN",
+            "offenseid": 843312,
+            "data_year": 193764,
+            "cleared": 496,
+            "actual": 1685,
+            "agencyid": 16452
+        },
+        {
+            "county_name": "FAYETTE",
+            "offenseid": 2039802,
+            "data_year": 460200,
+            "cleared": 3575,
+            "actual": 12030,
+            "agencyid": 76956
+        },
+        {
+            "county_name": "FLOYD",
+            "offenseid": 2203320,
+            "data_year": 484440,
+            "cleared": 3230,
+            "actual": 14825,
+            "agencyid": 50352
+        },
+        {
+            "county_name": "FORSYTH",
+            "offenseid": 1123260,
+            "data_year": 242184,
+            "cleared": 3158,
+            "actual": 14229,
+            "agencyid": 23556
+        },
+        {
+            "county_name": "FRANKLIN",
+            "offenseid": 1370376,
+            "data_year": 290664,
+            "cleared": 576,
+            "actual": 2773,
+            "agencyid": 37056
+        },
+        {
+            "county_name": "FULTON",
+            "offenseid": 12381144,
+            "data_year": 2422176,
+            "cleared": 18825,
+            "actual": 129809,
+            "agencyid": 326580
+        },
+        {
+            "county_name": "GILMER",
+            "offenseid": 1584648,
+            "data_year": 290664,
+            "cleared": 901,
+            "actual": 4426,
+            "agencyid": 30000
+        },
+        {
+            "county_name": "GLASCOCK",
+            "offenseid": 532824,
+            "data_year": 96888,
+            "cleared": 30,
+            "actual": 182,
+            "agencyid": 11760
+        },
+        {
+            "county_name": "GLYNN",
+            "offenseid": 2290206,
+            "data_year": 411756,
+            "cleared": 2968,
+            "actual": 18146,
+            "agencyid": 38820
+        },
+        {
+            "county_name": "GORDON",
+            "offenseid": 1504074,
+            "data_year": 266424,
+            "cleared": 3970,
+            "actual": 9088,
+            "agencyid": 23508
+        },
+        {
+            "county_name": "GRADY",
+            "offenseid": 1382460,
+            "data_year": 242208,
+            "cleared": 1087,
+            "actual": 4596,
+            "agencyid": 31512
+        },
+        {
+            "county_name": "GREENE",
+            "offenseid": 1396860,
+            "data_year": 242208,
+            "cleared": 523,
+            "actual": 1778,
+            "agencyid": 39264
+        },
+        {
+            "county_name": "GWINNETT",
+            "offenseid": 5293590,
+            "data_year": 896160,
+            "cleared": 11281,
+            "actual": 79615,
+            "agencyid": 149916
+        },
+        {
+            "county_name": "GWINNETT; BARROW",
+            "offenseid": 24426,
+            "data_year": 72648,
+            "cleared": 258,
+            "actual": 734,
+            "agencyid": 1188
+        },
+        {
+            "county_name": "GWINNETT; WALTON",
+            "offenseid": 802890,
+            "data_year": 72648,
+            "cleared": 676,
+            "actual": 1991,
+            "agencyid": 12204
+        },
+        {
+            "county_name": "HABERSHAM",
+            "offenseid": 2796378,
+            "data_year": 460176,
+            "cleared": 1126,
+            "actual": 3829,
+            "agencyid": 54360
+        },
+        {
+            "county_name": "HALL",
+            "offenseid": 2561934,
+            "data_year": 411756,
+            "cleared": 7474,
+            "actual": 26674,
+            "agencyid": 57084
+        },
+        {
+            "county_name": "HANCOCK",
+            "offenseid": 1220016,
+            "data_year": 193776,
+            "cleared": 97,
+            "actual": 839,
+            "agencyid": 37200
+        },
+        {
+            "county_name": "HARALSON",
+            "offenseid": 2474592,
+            "data_year": 387552,
+            "cleared": 899,
+            "actual": 5275,
+            "agencyid": 74928
+        },
+        {
+            "county_name": "HARRIS",
+            "offenseid": 1570236,
+            "data_year": 242220,
+            "cleared": 308,
+            "actual": 1028,
+            "agencyid": 53604
+        },
+        {
+            "county_name": "HARRIS; TROUP",
+            "offenseid": 777834,
+            "data_year": 72648,
+            "cleared": 672,
+            "actual": 1146,
+            "agencyid": 22932
+        },
+        {
+            "county_name": "HART",
+            "offenseid": 1109346,
+            "data_year": 169536,
+            "cleared": 912,
+            "actual": 3569,
+            "agencyid": 23304
+        },
+        {
+            "county_name": "HART; FRANKLIN",
+            "offenseid": 459096,
+            "data_year": 96888,
+            "cleared": 8,
+            "actual": 8,
+            "agencyid": 4320
+        },
+        {
+            "county_name": "HEARD",
+            "offenseid": 1276464,
+            "data_year": 193776,
+            "cleared": 370,
+            "actual": 1227,
+            "agencyid": 24144
+        },
+        {
+            "county_name": "HENRY",
+            "offenseid": 3068538,
+            "data_year": 460200,
+            "cleared": 5255,
+            "actual": 28644,
+            "agencyid": 69528
+        },
+        {
+            "county_name": "HOUSTON",
+            "offenseid": 1148226,
+            "data_year": 169536,
+            "cleared": 4796,
+            "actual": 8671,
+            "agencyid": 15336
+        },
+        {
+            "county_name": "IRWIN",
+            "offenseid": 1324848,
+            "data_year": 193776,
+            "cleared": 242,
+            "actual": 1818,
+            "agencyid": 34032
+        },
+        {
+            "county_name": "JACKSON",
+            "offenseid": 3019788,
+            "data_year": 436008,
+            "cleared": 1905,
+            "actual": 7207,
+            "agencyid": 48984
+        },
+        {
+            "county_name": "JASPER",
+            "offenseid": 851430,
+            "data_year": 121116,
+            "cleared": 577,
+            "actual": 1982,
+            "agencyid": 19104
+        },
+        {
+            "county_name": "JEFF DAVIS",
+            "offenseid": 1369776,
+            "data_year": 193776,
+            "cleared": 1324,
+            "actual": 2486,
+            "agencyid": 27984
+        },
+        {
+            "county_name": "JEFFERSON",
+            "offenseid": 2941374,
+            "data_year": 411744,
+            "cleared": 406,
+            "actual": 2460,
+            "agencyid": 84096
+        },
+        {
+            "county_name": "JENKINS",
+            "offenseid": 1048068,
+            "data_year": 145356,
+            "cleared": 140,
+            "actual": 1016,
+            "agencyid": 25368
+        },
+        {
+            "county_name": "JOHNSON",
+            "offenseid": 350508,
+            "data_year": 48456,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 11580
+        },
+        {
+            "county_name": "JONES",
+            "offenseid": 1408944,
+            "data_year": 193776,
+            "cleared": 1060,
+            "actual": 3075,
+            "agencyid": 27216
+        },
+        {
+            "county_name": "LAMAR",
+            "offenseid": 1952346,
+            "data_year": 266424,
+            "cleared": 1314,
+            "actual": 2400,
+            "agencyid": 26784
+        },
+        {
+            "county_name": "LANIER",
+            "offenseid": 1789980,
+            "data_year": 242220,
+            "cleared": 363,
+            "actual": 1466,
+            "agencyid": 38712
+        },
+        {
+            "county_name": "LANIER; BERRIEN",
+            "offenseid": 30828,
+            "data_year": 48444,
+            "cleared": 8,
+            "actual": 28050,
+            "agencyid": 10992
+        },
+        {
+            "county_name": "LAURENS",
+            "offenseid": 1442352,
+            "data_year": 193764,
+            "cleared": 1419,
+            "actual": 9355,
+            "agencyid": 24288
+        },
+        {
+            "county_name": "LEE",
+            "offenseid": 1087812,
+            "data_year": 145356,
+            "cleared": 1100,
+            "actual": 4468,
+            "agencyid": 23712
+        },
+        {
+            "county_name": "LIBERTY",
+            "offenseid": 2191176,
+            "data_year": 290616,
+            "cleared": 1114,
+            "actual": 6713,
+            "agencyid": 54528
+        },
+        {
+            "county_name": "LINCOLN",
+            "offenseid": 735000,
+            "data_year": 96876,
+            "cleared": 322,
+            "actual": 620,
+            "agencyid": 16092
+        },
+        {
+            "county_name": "LONG",
+            "offenseid": 1291794,
+            "data_year": 169536,
+            "cleared": 475,
+            "actual": 1347,
+            "agencyid": 28704
+        },
+        {
+            "county_name": "LOWNDES",
+            "offenseid": 4105860,
+            "data_year": 532848,
+            "cleared": 14556,
+            "actual": 27782,
+            "agencyid": 114420
+        },
+        {
+            "county_name": "LUMPKIN",
+            "offenseid": 1510320,
+            "data_year": 193776,
+            "cleared": 223,
+            "actual": 2071,
+            "agencyid": 45792
+        },
+        {
+            "county_name": "MACON",
+            "offenseid": 2882610,
+            "data_year": 363324,
+            "cleared": 383,
+            "actual": 974,
+            "agencyid": 67380
+        },
+        {
+            "county_name": "MADISON",
+            "offenseid": 1550640,
+            "data_year": 193776,
+            "cleared": 1067,
+            "actual": 3682,
+            "agencyid": 24288
+        },
+        {
+            "county_name": "MADISON; HART; FRANKLIN",
+            "offenseid": 228684,
+            "data_year": 48444,
+            "cleared": 142,
+            "actual": 230,
+            "agencyid": 11448
+        },
+        {
+            "county_name": "MARION",
+            "offenseid": 1364370,
+            "data_year": 169536,
+            "cleared": 371,
+            "actual": 539,
+            "agencyid": 19848
+        },
+        {
+            "county_name": "MCDUFFIE",
+            "offenseid": 758616,
+            "data_year": 96888,
+            "cleared": 414,
+            "actual": 1808,
+            "agencyid": 17280
+        },
+        {
+            "county_name": "MCINTOSH",
+            "offenseid": 1524144,
+            "data_year": 193764,
+            "cleared": 491,
+            "actual": 2115,
+            "agencyid": 24852
+        },
+        {
+            "county_name": "MERIWETHER",
+            "offenseid": 2953746,
+            "data_year": 363348,
+            "cleared": 858,
+            "actual": 2563,
+            "agencyid": 80820
+        },
+        {
+            "county_name": "MERIWETHER; HARRIS",
+            "offenseid": 627288,
+            "data_year": 96888,
+            "cleared": 36,
+            "actual": 336,
+            "agencyid": 21120
+        },
+        {
+            "county_name": "MILLER",
+            "offenseid": 1191492,
+            "data_year": 145296,
+            "cleared": 81,
+            "actual": 563,
+            "agencyid": 18396
+        },
+        {
+            "county_name": "MITCHELL",
+            "offenseid": 3001410,
+            "data_year": 363312,
+            "cleared": 1235,
+            "actual": 4628,
+            "agencyid": 60216
+        },
+        {
+            "county_name": "MITCHELL; THOMAS",
+            "offenseid": 251358,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 4380
+        },
+        {
+            "county_name": "MONROE",
+            "offenseid": 1614000,
+            "data_year": 193728,
+            "cleared": 1186,
+            "actual": 2730,
+            "agencyid": 27240
+        },
+        {
+            "county_name": "MONTGOMERY",
+            "offenseid": 810456,
+            "data_year": 96924,
+            "cleared": 8,
+            "actual": 54,
+            "agencyid": 21240
+        },
+        {
+            "county_name": "MONTGOMERY; TOOMBS",
+            "offenseid": 1019544,
+            "data_year": 96888,
+            "cleared": 1973,
+            "actual": 3940,
+            "agencyid": 29472
+        },
+        {
+            "county_name": "MORGAN",
+            "offenseid": 1016310,
+            "data_year": 121116,
+            "cleared": 202,
+            "actual": 1092,
+            "agencyid": 21540
+        },
+        {
+            "county_name": "MURRAY",
+            "offenseid": 2453832,
+            "data_year": 290664,
+            "cleared": 319,
+            "actual": 2227,
+            "agencyid": 33696
+        },
+        {
+            "county_name": "MUSCOGEE",
+            "offenseid": 2889012,
+            "data_year": 339120,
+            "cleared": 10108,
+            "actual": 46574,
+            "agencyid": 44976
+        },
+        {
+            "county_name": "NEWTON",
+            "offenseid": 2917236,
+            "data_year": 339096,
+            "cleared": 4013,
+            "actual": 18950,
+            "agencyid": 57312
+        },
+        {
+            "county_name": "NEWTON; WALTON",
+            "offenseid": 1072536,
+            "data_year": 96888,
+            "cleared": 56,
+            "actual": 720,
+            "agencyid": 23760
+        },
+        {
+            "county_name": "OCONEE",
+            "offenseid": 1258884,
+            "data_year": 145296,
+            "cleared": 806,
+            "actual": 2658,
+            "agencyid": 37584
+        },
+        {
+            "county_name": "OGLETHORPE",
+            "offenseid": 842136,
+            "data_year": 96888,
+            "cleared": 324,
+            "actual": 1635,
+            "agencyid": 19968
+        },
+        {
+            "county_name": "PAULDING",
+            "offenseid": 2540232,
+            "data_year": 290664,
+            "cleared": 3877,
+            "actual": 22599,
+            "agencyid": 41472
+        },
+        {
+            "county_name": "PEACH",
+            "offenseid": 3428448,
+            "data_year": 387552,
+            "cleared": 1727,
+            "actual": 5840,
+            "agencyid": 45648
+        },
+        {
+            "county_name": "PEACH; HOUSTON",
+            "offenseid": 1311024,
+            "data_year": 193776,
+            "cleared": 11732,
+            "actual": 35974,
+            "agencyid": 50688
+        },
+        {
+            "county_name": "PICKENS",
+            "offenseid": 1944702,
+            "data_year": 218004,
+            "cleared": 747,
+            "actual": 4571,
+            "agencyid": 40632
+        },
+        {
+            "county_name": "PIERCE",
+            "offenseid": 1956366,
+            "data_year": 218004,
+            "cleared": 677,
+            "actual": 4116,
+            "agencyid": 28836
+        },
+        {
+            "county_name": "PIERCE; WARE",
+            "offenseid": 1077144,
+            "data_year": 96888,
+            "cleared": 3521,
+            "actual": 5955,
+            "agencyid": 30288
+        },
+        {
+            "county_name": "PIKE",
+            "offenseid": 2187420,
+            "data_year": 242208,
+            "cleared": 687,
+            "actual": 1717,
+            "agencyid": 61656
+        },
+        {
+            "county_name": "POLK",
+            "offenseid": 3973644,
+            "data_year": 435984,
+            "cleared": 2495,
+            "actual": 10561,
+            "agencyid": 65364
+        },
+        {
+            "county_name": "POLK; PAULDING",
+            "offenseid": 851352,
+            "data_year": 96888,
+            "cleared": 4,
+            "actual": 6,
+            "agencyid": 3312
+        },
+        {
+            "county_name": "PULASKI",
+            "offenseid": 889368,
+            "data_year": 96888,
+            "cleared": 198,
+            "actual": 2141,
+            "agencyid": 21696
+        },
+        {
+            "county_name": "PUTNAM",
+            "offenseid": 1785648,
+            "data_year": 193776,
+            "cleared": 962,
+            "actual": 3093,
+            "agencyid": 30816
+        },
+        {
+            "county_name": "QUITMAN",
+            "offenseid": 447852,
+            "data_year": 48432,
+            "cleared": 4,
+            "actual": 26,
+            "agencyid": 10896
+        },
+        {
+            "county_name": "RABUN",
+            "offenseid": 3378114,
+            "data_year": 363288,
+            "cleared": 366,
+            "actual": 2067,
+            "agencyid": 55632
+        },
+        {
+            "county_name": "RABUN; HABERSHAM",
+            "offenseid": 225438,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 6900
+        },
+        {
+            "county_name": "RANDOLPH",
+            "offenseid": 2043198,
+            "data_year": 217944,
+            "cleared": 116,
+            "actual": 554,
+            "agencyid": 22500
+        },
+        {
+            "county_name": "RICHMOND",
+            "offenseid": 4815702,
+            "data_year": 508632,
+            "cleared": 5583,
+            "actual": 28003,
+            "agencyid": 42492
+        },
+        {
+            "county_name": "ROCKDALE",
+            "offenseid": 1390212,
+            "data_year": 145296,
+            "cleared": 2021,
+            "actual": 12379,
+            "agencyid": 21996
+        },
+        {
+            "county_name": "SCHLEY",
+            "offenseid": 1861680,
+            "data_year": 193776,
+            "cleared": 76,
+            "actual": 262,
+            "agencyid": 32688
+        },
+        {
+            "county_name": "SCREVEN",
+            "offenseid": 2340060,
+            "data_year": 242232,
+            "cleared": 584,
+            "actual": 2002,
+            "agencyid": 59532
+        },
+        {
+            "county_name": "SEMINOLE",
+            "offenseid": 1882416,
+            "data_year": 193776,
+            "cleared": 213,
+            "actual": 1164,
+            "agencyid": 31680
+        },
+        {
+            "county_name": "SPALDING",
+            "offenseid": 2840904,
+            "data_year": 290664,
+            "cleared": 5350,
+            "actual": 18436,
+            "agencyid": 60480
+        },
+        {
+            "county_name": "STEPHENS",
+            "offenseid": 1905456,
+            "data_year": 193776,
+            "cleared": 3022,
+            "actual": 5354,
+            "agencyid": 55008
+        },
+        {
+            "county_name": "STEWART",
+            "offenseid": 1674834,
+            "data_year": 169560,
+            "cleared": 8,
+            "actual": 56,
+            "agencyid": 40764
+        },
+        {
+            "county_name": "SUMTER",
+            "offenseid": 4339116,
+            "data_year": 435960,
+            "cleared": 2095,
+            "actual": 9359,
+            "agencyid": 67368
+        },
+        {
+            "county_name": "TALBOT",
+            "offenseid": 1943472,
+            "data_year": 193728,
+            "cleared": 48,
+            "actual": 446,
+            "agencyid": 56772
+        },
+        {
+            "county_name": "TALBOT; MERIWETHER",
+            "offenseid": 785112,
+            "data_year": 96888,
+            "cleared": 277,
+            "actual": 997,
+            "agencyid": 16944
+        },
+        {
+            "county_name": "TALIAFERRO",
+            "offenseid": 731178,
+            "data_year": 72648,
+            "cleared": 8,
+            "actual": 54,
+            "agencyid": 20628
+        },
+        {
+            "county_name": "TATTNALL",
+            "offenseid": 2201310,
+            "data_year": 218004,
+            "cleared": 807,
+            "actual": 2839,
+            "agencyid": 44976
+        },
+        {
+            "county_name": "TAYLOR",
+            "offenseid": 2706330,
+            "data_year": 266424,
+            "cleared": 216,
+            "actual": 579,
+            "agencyid": 46836
+        },
+        {
+            "county_name": "TELFAIR",
+            "offenseid": 1485972,
+            "data_year": 145320,
+            "cleared": 34,
+            "actual": 34,
+            "agencyid": 26580
+        },
+        {
+            "county_name": "TELFAIR; DODGE",
+            "offenseid": 247902,
+            "data_year": 24228,
+            "cleared": 0,
+            "actual": 0,
+            "agencyid": 4476
+        },
+        {
+            "county_name": "TERRELL",
+            "offenseid": 1741362,
+            "data_year": 169536,
+            "cleared": 530,
+            "actual": 1298,
+            "agencyid": 28512
+        },
+        {
+            "county_name": "THOMAS",
+            "offenseid": 3755538,
+            "data_year": 363360,
+            "cleared": 2953,
+            "actual": 10628,
+            "agencyid": 70248
+        },
+        {
+            "county_name": "TIFT",
+            "offenseid": 2779914,
+            "data_year": 266424,
+            "cleared": 2516,
+            "actual": 11223,
+            "agencyid": 49272
+        },
+        {
+            "county_name": "TOOMBS",
+            "offenseid": 1271190,
+            "data_year": 121092,
+            "cleared": 368,
+            "actual": 1236,
+            "agencyid": 26676
+        },
+        {
+            "county_name": "TOWNS",
+            "offenseid": 3072456,
+            "data_year": 290664,
+            "cleared": 409,
+            "actual": 1305,
+            "agencyid": 73488
+        },
+        {
+            "county_name": "TREUTLEN",
+            "offenseid": 1286310,
+            "data_year": 121116,
+            "cleared": 225,
+            "actual": 413,
+            "agencyid": 34368
+        },
+        {
+            "county_name": "TROUP",
+            "offenseid": 2842986,
+            "data_year": 266412,
+            "cleared": 3650,
+            "actual": 13957,
+            "agencyid": 54168
+        },
+        {
+            "county_name": "TURNER",
+            "offenseid": 2342574,
+            "data_year": 217992,
+            "cleared": 293,
+            "actual": 1042,
+            "agencyid": 43548
+        },
+        {
+            "county_name": "TWIGGS",
+            "offenseid": 1830066,
+            "data_year": 169536,
+            "cleared": 238,
+            "actual": 1026,
+            "agencyid": 50364
+        },
+        {
+            "county_name": "UNION",
+            "offenseid": 2100144,
+            "data_year": 193776,
+            "cleared": 626,
+            "actual": 1981,
+            "agencyid": 31872
+        },
+        {
+            "county_name": "UPSON",
+            "offenseid": 1581156,
+            "data_year": 145296,
+            "cleared": 1445,
+            "actual": 4748,
+            "agencyid": 42912
+        },
+        {
+            "county_name": "WALKER",
+            "offenseid": 4241760,
+            "data_year": 387480,
+            "cleared": 2180,
+            "actual": 8978,
+            "agencyid": 72840
+        },
+        {
+            "county_name": "WALKER; CATOOSA",
+            "offenseid": 156696,
+            "data_year": 96888,
+            "cleared": 2158,
+            "actual": 4468,
+            "agencyid": 10512
+        },
+        {
+            "county_name": "WALTON",
+            "offenseid": 2134704,
+            "data_year": 193776,
+            "cleared": 1950,
+            "actual": 9394,
+            "agencyid": 48048
+        },
+        {
+            "county_name": "WARE",
+            "offenseid": 1074840,
+            "data_year": 96888,
+            "cleared": 3778,
+            "actual": 4237,
+            "agencyid": 29808
+        },
+        {
+            "county_name": "WARREN",
+            "offenseid": 1890546,
+            "data_year": 169536,
+            "cleared": 72,
+            "actual": 484,
+            "agencyid": 52464
+        },
+        {
+            "county_name": "WASHINGTON",
+            "offenseid": 4074930,
+            "data_year": 363300,
+            "cleared": 952,
+            "actual": 2599,
+            "agencyid": 86328
+        },
+        {
+            "county_name": "WAYNE",
+            "offenseid": 2460510,
+            "data_year": 217944,
+            "cleared": 3779,
+            "actual": 8115,
+            "agencyid": 51408
+        },
+        {
+            "county_name": "WEBSTER",
+            "offenseid": 822762,
+            "data_year": 72648,
+            "cleared": 0,
+            "actual": 12,
+            "agencyid": 22824
+        },
+        {
+            "county_name": "WHEELER",
+            "offenseid": 1649412,
+            "data_year": 145320,
+            "cleared": 14,
+            "actual": 222,
+            "agencyid": 15696
+        },
+        {
+            "county_name": "WHEELER; TELFAIR",
+            "offenseid": 741546,
+            "data_year": 72672,
+            "cleared": 134,
+            "actual": 448,
+            "agencyid": 13104
+        },
+        {
+            "county_name": "WHITE",
+            "offenseid": 3314376,
+            "data_year": 290664,
+            "cleared": 949,
+            "actual": 3280,
+            "agencyid": 50160
+        },
+        {
+            "county_name": "WHITFIELD",
+            "offenseid": 4451424,
+            "data_year": 387516,
+            "cleared": 6241,
+            "actual": 17148,
+            "agencyid": 68352
+        },
+        {
+            "county_name": "WILCOX",
+            "offenseid": 3362760,
+            "data_year": 290652,
+            "cleared": 108,
+            "actual": 711,
+            "agencyid": 53172
+        },
+        {
+            "county_name": "WILKES",
+            "offenseid": 1125528,
+            "data_year": 96888,
+            "cleared": 255,
+            "actual": 875,
+            "agencyid": 30960
+        },
+        {
+            "county_name": "WILKINSON",
+            "offenseid": 5662200,
+            "data_year": 484404,
+            "cleared": 384,
+            "actual": 824,
+            "agencyid": 99540
+        },
+        {
+            "county_name": "WORTH",
+            "offenseid": 3997812,
+            "data_year": 339072,
+            "cleared": 1042,
+            "actual": 3691,
+            "agencyid": 97440
+        }
+    ]
+}
