@@ -32,7 +32,7 @@
             <h5>Year:</h5>
             <select
               id="yearDataset"
-              onchange="optionChangedCounty(this.value)"
+              onchange="optionChangedYear(this.value)"
             ></select>
           </div>
           <div class="panel panel-primary">
@@ -46,8 +46,11 @@
         <div class="col-md-5">
           <div id="bar"></div>
         </div>
-        <div class="col-md-5">
-          <div id="gauge"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="plot"></div>
+            <div id="line_plot"></div>
+          </div>
         </div>
       </div>
       <div class="row">

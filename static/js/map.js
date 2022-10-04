@@ -15,17 +15,9 @@ function createMap(county) {
     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',}
   );
-
-  //terrain layer
-  var terrain = L.tileLayer(
-    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-    {attribution:"Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",}
-  );
-
   // Create a baseMaps object.
   var baseMaps = {
     "Street Map": street,
-    "Topographic Map": terrain,
   };
 
   // Create an overlay object to hold our overlay.
@@ -33,6 +25,7 @@ function createMap(county) {
     Counties: county,
     Departments: loclayer,
   };
+
 
   var legend = L.control(
     {
@@ -43,7 +36,22 @@ function createMap(county) {
   legend.onAdd = function()
   {
       var div = L.DomUtil.create("div", "info legend");
-      // console.log(div)
+
+      // departmentIntervals = ['Non-Crime', 'NaN', 0, 25, 75]
+     
+      // departmentColor = [
+      //   'blue',
+      //   'violet',
+      //   'red',
+      //   'yellow',
+      //   'green'
+      // ]
+
+      // for(a=0; a<departmentIntervals.length; a++)
+      // {
+      //   div.innerHTML += "<i style='background: " + departmentcolors[i] + "'></i>" 
+      //     + '$' + departmentintervals[i] + (departmentintervals[i+1]  ? ' &ndash; ' + departmentintervals[i+1] + ' <br>': '+')
+      // }
 
       var intervals = [0, 37500, 55000, 70000];
 
@@ -69,23 +77,89 @@ function createMap(county) {
     })
     .addTo(myMap);
 }
+d3.json('data/crimes_location.json').then(
+  function(crimes){
+    {
+      crimedct = []
+
+      for(i = 0; i < crimes.data.length; i++){
+        loc = crimes.data[i].agency_name
+        clear = crimes.data[i].cleared
+        actual = crimes.data[i].actual
+        percent = ((clear/actual)*100).toFixed(2)
+
+        var markerColor;
+
+        if(percent > 75)
+          markerColor =  new L.Icon({
+            iconUrl: 'img/marker-icon-2x-green.png',
+            shadowUrl: 'img/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          });
+        
+        else if(percent > 25)
+          markerColor =  new L.Icon({
+            iconUrl: 'img/marker-icon-2x-yellow.png',
+            shadowUrl: 'img/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          });
+
+        else if(percent >= 0)
+          markerColor =  new L.Icon({
+            iconUrl: 'img/marker-icon-2x-red.png',
+            shadowUrl: 'img/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          });
+
+        else 
+          markerColor =  new L.Icon({
+            iconUrl: 'img/marker-icon-2x-violet.png',
+            shadowUrl: 'img/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+          });
+
+        x = {loc, clear, actual, percent, markerColor}
+          
+
+        crimedct.push(x)
+      }
+    }
 
 d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
   {
     locations = [];
 
+
     for (i = 0; i < countydata.length; i++) {
       lat = countydata[i].Latitude;
       lng = countydata[i].Longitude;
       Income = countydata[i]["2020 Income per Capita"];
-
-      locArea = L.marker([lat, lng]).bindPopup(
-        `<h2> ${countydata[i]["Agency Name"]}</h2>`
-      );
+      
+      if (_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])}) >= 0)
+        locArea = L.marker([lat, lng], {icon: crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].markerColor}).bindPopup(
+          `<h2> ${countydata[i]["Agency Name"]}</h2><hr> <p>Total crimes: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].actual} </p>
+          Solved Crimes: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].clear}</p><p> Percent Solved: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].percent}%`);
+      else
+        locArea = L.marker([lat, lng]).bindPopup(
+          `<h2> ${countydata[i]["Agency Name"]}</h2>`);
 
       locations.push(locArea);
+      
+
     }
-    // L.heatLayer(lat)
+
     loclayer = L.layerGroup(locations);
   }
 
@@ -111,6 +185,24 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
       x = { cty, countycolor };
       combined.push(x);
     }
+    
+    d3.json('data/crimes_county.json').then(
+      function(crimelocation){
+
+        cldict = []
+
+        for (i = 0; i < crimelocation.data.length; i++){
+          countloc = crimelocation.data[i].county_name
+          countclear = crimelocation.data[i].cleared
+          countactual = crimelocation.data[i].actual
+          countpercent = ((countclear/countactual)*100).toFixed(2)
+          z = {countloc, countclear, countactual, countpercent}
+
+          cldict.push(z)
+        
+        }
+
+
 
     d3.json("data/GA-13-georgia-counties.json").then(function (data) {
       var geojson = topojson.feature(
@@ -118,7 +210,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
         data.objects.cb_2015_georgia_county_20m
       ).features;
 
-      console.log(combined);
+      
       var county = L.geoJson(geojson, {
         style: function (Feature) {
           if (_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",}) >= 0) {
@@ -155,11 +247,15 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
 
             click: function (event) {
               layer = event.target;
-              myMap.fitBounds(layer.getBounds());
+              //myMap.fitBounds(layer.getBounds());
             },
           });
-
-          layer.bindPopup(`${Feature.properties.NAME} County <hr> `);
+       
+          if (_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}) >= 0)
+            layer.bindPopup(`<h2>${Feature.properties.NAME} County </h2> <hr> <p>Total Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countactual)}</p>
+            <p>Solved Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countclear)}</p><p>Percent of Crimes Solved: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countpercent)}%`);
+          else
+            layer.bindPopup(`${Feature.properties.NAME} County <hr> `);
           
         },
       });
@@ -168,3 +264,5 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
     });
   });
 });
+});
+})
