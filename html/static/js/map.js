@@ -182,9 +182,9 @@ d3.json("../data/Ga_Department_Locations.json").then(function (countydata) {
         countycolor = "#FF0000";
 
       var cty = income[i]["County"];
-
+      var inc = income[i]["2020 Income per Capita"]
       cty = _.toUpper(cty);
-      x = { cty, countycolor };
+      x = {cty, countycolor, inc};
       combined.push(x);
     }
     
@@ -252,9 +252,10 @@ d3.json("../data/Ga_Department_Locations.json").then(function (countydata) {
               //myMap.fitBounds(layer.getBounds());
             },
           });
-       
+          console.log(combined[(_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",}))].cty)
+          
           if (_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}) >= 0)
-            layer.bindPopup(`<h2>${Feature.properties.NAME} County </h2> <hr> <p>Total Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countactual)}</p>
+            layer.bindPopup(`<h2>${Feature.properties.NAME} County </h2> <hr> <p>2020 Median Income: $${(combined[(_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",}))].inc)}</p> <p>Total Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countactual)}</p> 
             <p>Solved Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countclear)}</p><p>Percent of Crimes Solved: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countpercent)}%`);
           else
             layer.bindPopup(`${Feature.properties.NAME} County <hr> `);
