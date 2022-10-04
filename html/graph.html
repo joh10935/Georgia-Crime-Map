@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css" media="screen"> -->
 
     <!-- Our own CSS stylesheet -->
     <link rel="stylesheet" href="bootstrap.css" media="screen">
@@ -44,19 +44,18 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
-          <h1>Crime Data Test</h1>
-          <p>Trial</p>
+          <h1 style = "color:white;">Crime Data Test</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="well">
-            <h5>Agency:</h5>
+            <h5 style = "color:white;">Agency:</h5>
             <select
               id="agencyDataset"
               onchange="optionChangedAgency(this.value)"
             ></select>
-            <h5>Year:</h5>
+            <h5 style = "color:white;">Year:</h5>
             <select
               id="yearDataset"
               onchange="optionChangedYear(this.value)"
