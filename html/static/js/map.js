@@ -72,7 +72,7 @@ function createMap(county) {
     })
     .addTo(myMap);
 }
-d3.json('data/crimes_location.json').then(
+d3.json('../data/crimes_location.json').then(
   function(crimes){
     {
       crimedct = []
@@ -132,7 +132,7 @@ d3.json('data/crimes_location.json').then(
       }
     }
 
-d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
+d3.json("../data/Ga_Department_Locations.json").then(function (countydata) {
   {
     locations = [];
 
@@ -165,7 +165,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
     loclayer = L.layerGroup(locations);
   }
 
-  d3.json("data/ID_capita.json").then(function (income) {
+  d3.json("../data/ID_capita.json").then(function (income) {
     ctycolor = [];
     combined = [];
 
@@ -188,7 +188,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
       combined.push(x);
     }
     
-    d3.json('data/crimes_county.json').then(
+    d3.json('../data/crimes_county.json').then(
       function(crimelocation){
 
         cldict = []
@@ -206,7 +206,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
 
 
 
-    d3.json("data/GA-13-georgia-counties.json").then(function (data) {
+    d3.json("../data/GA-13-georgia-counties.json").then(function (data) {
       var geojson = topojson.feature(
         data,
         data.objects.cb_2015_georgia_county_20m
