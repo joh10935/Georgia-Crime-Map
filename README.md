@@ -8,7 +8,6 @@
 * Sarje Page
 * Chloe Stitik
 * Lennox Nguyen
-* Megan Harper
 * Diana Lam
 * Daulton Davis
 
