@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Crime Data Test</title>
-    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
-
-    <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="bootstrap.css" media="screen">
-
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
 
     <!-- Our own CSS stylesheet -->
   </head>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navigation Bar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="map.html">Leaflet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="graph.html">Dashboard</a>
-          </li>
-        </ul>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navigation Bar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="graph.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map.html">Leaflet</a>
+            </li>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   <body>
     <div class="container">
       <div class="row">
@@ -43,16 +44,9 @@
           <p>Trial</p>
         </div>
       </div>
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-primary">Agency:</button>
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <a class="dropdown-item" href="#">Dropdown link</a>
-            <a class="dropdown-item" href="#">Dropdown link</a>
-          </div>
-        </div>
-      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
             <h5>Agency:</h5>
             <select
               id="agencyDataset"
@@ -61,7 +55,7 @@
             <h5>Year:</h5>
             <select
               id="yearDataset"
-              onchange="optionChangedCounty(this.value)"
+              onchange="optionChangedYear(this.value)"
             ></select>
           </div>
           <div class="panel panel-primary">
@@ -75,8 +69,11 @@
         <div class="col-md-5">
           <div id="bar"></div>
         </div>
-        <div class="col-md-5">
-          <div id="gauge"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="plot"></div>
+            <div id="line_plot"></div>
+          </div>
         </div>
       </div>
       <div class="row">
@@ -93,6 +90,6 @@
     ></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="app.js"></script>
+    <script src="graphapp.js"></script>
   </body>
 </html>
