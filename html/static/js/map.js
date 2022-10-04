@@ -192,8 +192,7 @@ d3.json("../data/crimes_location.json").then(function (crimes) {
 
           var county = L.geoJson(geojson, {
             style: function (Feature) {
-              if (
-                _.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",}) >= 0) {
+              if (_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",}) >= 0) {
                 return {
                   color: "black",
                   fillColor:combined[_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME) + " COUNTY",})].countycolor,
