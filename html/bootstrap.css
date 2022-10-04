@@ -648,6 +648,7 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+
 }
 
 @media (min-width: 576px) {
@@ -1153,6 +1154,8 @@ progress {
   .col-md-12 {
     flex: 0 0 auto;
     width: 100%;
+    background-color: #495057;
+    border-color: white; 
   }
   .offset-md-0 {
     margin-left: 0;
@@ -11050,4 +11053,20 @@ label,
 
 .modal-header, .modal-footer {
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.well {
+  min-height:20px;
+  padding:19px;
+  margin-bottom:20px;
+  background-color:#1a2c3d;
+  border:1px solid #e3e3e3;
+  border-radius:4px;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,.05)
+}
+
+.panel-body{
+  padding:15px;
+  background-color: #1a2c3d;
 }
