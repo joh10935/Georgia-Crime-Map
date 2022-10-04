@@ -29,11 +29,11 @@ With ORI (Originating Agency Identifier) of the Georgia law enforcement system, 
 ### Extract: indicates the original data sources and how the data were formatted at a professional level
 ### Transform: explains what data clearing or transformation was required at a professional level
 ### Load: explains the final database, tables/collections, and why the topic was chosen at a professional level
-To create the Quick DBD, we had to identify and relate the columns from the Crime Data and Median House Income Data.
+To create the database, we had to identify and relate the columns from the Crime Data and Median House Income Data.
 
-<img src = "resources/GACRIME_erd.PNG" width = "350">
+<img src = "resources/Postgesql_erd.PNG" width = "450">
 
-To create the final Database, we had to build SQL Database using PostgreSQL, import data, and then execute table joins via query.
+Finally, we had to build SQL Database using PostgreSQL, import data, and then execute table joins via query.
 
 [Placeholder for image]
 
