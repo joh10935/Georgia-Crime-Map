@@ -1,9 +1,3 @@
-// Location Coordinates
-// organize code
-// cloropeth based on income
-// markers for agencies with popups
-
-
 var myMap = L.map("map", {
   center: [32.8407, -83.6324],
   zoom: 8,
@@ -37,21 +31,22 @@ function createMap(county) {
   {
       var div = L.DomUtil.create("div", "info legend");
 
-      // departmentIntervals = ['Non-Crime', 'NaN', 0, 25, 75]
+      departmentIntervals = [0, 25, 75]
      
-      // departmentColor = [
-      //   'blue',
-      //   'violet',
-      //   'red',
-      //   'yellow',
-      //   'green'
-      // ]
-
-      // for(a=0; a<departmentIntervals.length; a++)
-      // {
-      //   div.innerHTML += "<i style='background: " + departmentcolors[i] + "'></i>" 
-      //     + '$' + departmentintervals[i] + (departmentintervals[i+1]  ? ' &ndash; ' + departmentintervals[i+1] + ' <br>': '+')
-      // }
+      departmentColor = [
+        'red',
+        'yellow',
+        'green'
+      ]
+      div.innerHTML = '<h3>Crime Solved Rate</h3>'
+      for(a=0; a<departmentIntervals.length; a++)
+      {
+        div.innerHTML += "<i style='background: " + departmentColor[a] + "'></i>" 
+           + departmentIntervals[a] + (departmentIntervals[a+1]  ? ' &ndash; ' + departmentIntervals[a+1] + ' Percent' + ' <br>': '+')
+      }
+      
+      
+      div.innerHTML += "<br><i style='background: purple'></i>NaN"
 
       var intervals = [0, 37500, 55000, 70000];
 
@@ -61,7 +56,7 @@ function createMap(county) {
           '#00FFFF',
           '#008000'
       ]
-
+      div.innerHTML += '<h3>Median Household Income</h3>'
       for(var i=0; i<intervals.length; i++)
       {
           div.innerHTML += "<i style='background: " + colors[i] + "'></i>" 
@@ -77,7 +72,7 @@ function createMap(county) {
     })
     .addTo(myMap);
 }
-d3.json('data/crimes_location.json').then(
+d3.json('../data/crimes_location.json').then(
   function(crimes){
     {
       crimedct = []
@@ -137,10 +132,17 @@ d3.json('data/crimes_location.json').then(
       }
     }
 
-d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
+d3.json("../data/Ga_Department_Locations.json").then(function (countydata) {
   {
     locations = [];
 
+    purpleMarker =  new L.Icon({
+      iconUrl: 'img/marker-icon-2x-violet.png',
+      shadowUrl: 'img/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]})
 
     for (i = 0; i < countydata.length; i++) {
       lat = countydata[i].Latitude;
@@ -152,7 +154,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
           `<h2> ${countydata[i]["Agency Name"]}</h2><hr> <p>Total crimes: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].actual} </p>
           Solved Crimes: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].clear}</p><p> Percent Solved: ${crimedct[_.findIndex(crimedct, {loc: (countydata[i]["Agency Name"])})].percent}%`);
       else
-        locArea = L.marker([lat, lng]).bindPopup(
+        locArea = L.marker([lat, lng], {icon: purpleMarker}).bindPopup(
           `<h2> ${countydata[i]["Agency Name"]}</h2>`);
 
       locations.push(locArea);
@@ -163,7 +165,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
     loclayer = L.layerGroup(locations);
   }
 
-  d3.json("data/ID_capita.json").then(function (income) {
+  d3.json("../data/ID_capita.json").then(function (income) {
     ctycolor = [];
     combined = [];
 
@@ -186,7 +188,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
       combined.push(x);
     }
     
-    d3.json('data/crimes_county.json').then(
+    d3.json('../data/crimes_county.json').then(
       function(crimelocation){
 
         cldict = []
@@ -204,7 +206,7 @@ d3.json("data/Ga_Department_Locations.json").then(function (countydata) {
 
 
 
-    d3.json("data/GA-13-georgia-counties.json").then(function (data) {
+    d3.json("../data/GA-13-georgia-counties.json").then(function (data) {
       var geojson = topojson.feature(
         data,
         data.objects.cb_2015_georgia_county_20m
