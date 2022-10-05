@@ -208,7 +208,7 @@ d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
 
 
 
-    d3.json("../data/GA-13-georgia-counties.json").then(function (data) {
+    d3.json("../../../data/GA-13-georgia-counties.json").then(function (data) {
       var geojson = topojson.feature(
         data,
         data.objects.cb_2015_georgia_county_20m
