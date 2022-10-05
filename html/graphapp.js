@@ -136,6 +136,16 @@ function buildBarChart(yearObj) {
 
     let layout = {
       title: yearObj.agency + " " + yearObj.year,
+      xaxis:{
+        title: {
+          text: 'Type of Offenses'
+        },
+      },
+      yaxis:{
+        title: {
+          text: 'Number of Offenses'
+        },
+      },
     };
     Plotly.newPlot("bar", [barChart], layout);
   });
@@ -168,6 +178,16 @@ function buildBubbleChart(yearObj) {
     let layout = {
       title: "Bubble Chart of agency: " + yearObj.agency + " " + yearObj.year,
       hovermode: "closest",
+      xaxis:{
+        title: {
+          text: 'Type of Offenses'
+        },
+      },
+      yaxis:{
+        title: {
+          text: 'Number of Offenses'
+        },
+      },
     };
 
     Plotly.newPlot("bubble", [BubbleChart], layout);
@@ -204,6 +224,16 @@ function buildLineChart(yearObj) {
 
     let layout = {
       title: "Incidents over years",
+      xaxis:{
+        title: {
+          text: 'Year'
+        },
+      },
+      yaxis:{
+        title: {
+          text: 'Total Number of Offenses'
+        },
+      },
     };
 
     Plotly.newPlot("plot", plotData, layout);
@@ -231,6 +261,16 @@ function buildIncomeLineChart(yearObj) {
 
     let layout = {
       title: "Income over years",
+      xaxis:{
+        title: {
+          text: 'Year'
+        },
+      },
+      yaxis:{
+        title: {
+          text: 'Median Income'
+        },
+      },
     };
 
     Plotly.newPlot("line_plot", plotData, layout);
