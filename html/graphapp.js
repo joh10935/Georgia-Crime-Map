@@ -225,6 +225,7 @@ function buildLineChart(yearObj) {
     let layout = {
       title: "Incidents over years",
       xaxis:{
+        tickvals:['2017','2018','2019','2020'],
         title: {
           text: 'Year'
         },
@@ -262,6 +263,7 @@ function buildIncomeLineChart(yearObj) {
     let layout = {
       title: "Income over years",
       xaxis:{
+        tickvals:['2017','2018','2019','2020'],
         title: {
           text: 'Year'
         },
