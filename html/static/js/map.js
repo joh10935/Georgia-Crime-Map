@@ -60,16 +60,16 @@ function createMap(county) {
 }
 
 //Crime Data per Department
-d3.json("../data/crimes_location.json").then(function (crimes) {
+d3.json("api/agency").then(function (crimes) {
   {
     crimedct = [];
 
     for (i = 0; i < crimes.data.length; i++) {
-      loc = crimes.data[i].agency_name;
-      clear = crimes.data[i].cleared;
-      actual = crimes.data[i].actual;
+      loc = crimes[i].agency_name;
+      clear = crimes[i].cleared;
+      actual = crimes[i].actual;
       percent = ((clear / actual) * 100).toFixed(2);
-
+      console.log(crimes)
       //Set Marker Colors per Solve rate
       var markerColor;
 
