@@ -104,6 +104,26 @@ def CountyCrimes():
         x.append(d)
     return jsonify(x)
 
+@app.route('/api/Offense')
+def Offense():
+    x=[]
+    results = cursor.execute('SELECT agc.agencyid, agency_name, offense, cnty.countyid, cnty.county_name, actual, percapita_income, offn.data_year "year" FROM "Agency" agc inner join "CountyAgency" cntyagc on agc.agencyid = cast (cntyagc.agencyid as bigint) inner join "County" cnty on cntyagc.countyid = cnty.countyid inner join "Income" inc on cnty.countyid = inc.countyid inner join "Offense" offn on agc.ori = offn.ori WHERE offn.data_year = inc.data_year ORDER BY agc.agencyid, countyid, offense, offn.data_year')
+    rows = cursor.fetchall()
+    # results = pd.read_sql('SELECT * FROM public."Agency"', conn)
+    for row in rows:
+        d = collections.OrderedDict()
+        d['agencyid'] = row[0]
+        d['agency_name'] = row[1]
+        d['offense'] = row[2]
+        d['countyid'] = row[3]
+        d['county_name'] = row[4]
+        d['actual'] = row[5]
+        d['percapita_income'] = row[6]
+        d['year'] = row[7]
+
+        x.append(d)
+    return jsonify(x)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -28,7 +28,7 @@ function mapOffenseToYear(agencyData) {
 
 // Displays the county and a list of offenses based on the year selected
 function demoInfoYear(yearObj) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter(
       (agency) => agency["agency_name"] === yearObj.agency
     );
@@ -57,7 +57,7 @@ function demoInfoYear(yearObj) {
 }
 
 function initializeYears(agencyName) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter((agency) => agency["agency_name"] === agencyName);
     const mappedData = mapOffenseToYear(result);
 
@@ -115,7 +115,7 @@ function removeDuplicate(dataList, keyword) {
 }
 
 function buildBarChart(yearObj) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter(
       (agency) => agency["agency_name"] === yearObj.agency
     );
@@ -152,7 +152,7 @@ function buildBarChart(yearObj) {
 }
 
 function buildBubbleChart(yearObj) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter(
       (agency) => agency["agency_name"] === yearObj.agency
     );
@@ -195,7 +195,7 @@ function buildBubbleChart(yearObj) {
 }
 
 function buildLineChart(yearObj) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter(
       (agency) => agency["agency_name"] === yearObj.agency
     );
@@ -242,7 +242,7 @@ function buildLineChart(yearObj) {
 }
 
 function buildIncomeLineChart(yearObj) {
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     let result = data.filter(
       (agency) => agency["agency_name"] === yearObj.agency
     );
@@ -282,7 +282,7 @@ function buildIncomeLineChart(yearObj) {
 //function for the agency dropdown button
 function initializeAgency() {
   let select = d3.select("#agencyDataset");
-  d3.json("../data/offenses.json").then((data) => {
+  d3.json("http://127.0.0.1:5000/api/Offense").then((data) => {
     const uniqueData = removeDuplicate(data, "agency_name");
     uniqueData.forEach((sample) => {
       select
