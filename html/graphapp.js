@@ -223,7 +223,7 @@ function buildLineChart(yearObj) {
     let plotData = [trace1];
 
     let layout = {
-      title: "Incidents over years",
+      title: "Total Number of Crime on Each Year",
       xaxis:{
         tickvals:['2017','2018','2019','2020'],
         title: {
@@ -261,7 +261,7 @@ function buildIncomeLineChart(yearObj) {
     let plotData = [trace1];
 
     let layout = {
-      title: "Income over years",
+      title: "Median Income of Each Year",
       xaxis:{
         tickvals:['2017','2018','2019','2020'],
         title: {
