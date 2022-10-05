@@ -26,15 +26,17 @@ With ORI (Originating Agency Identifier) of the Georgia law enforcement system, 
 
 ## Rough Breakdown of Data and Data Delivery
 ### Extract: indicates the original data sources and how the data were formatted at a professional level
+Initially, the team thought it would be cool to compare the types of crimes against the median household income in the country, but we quickly realized the goal was not just to compare the data but also to gather data and join the data. After establishing our project objectives, we googled different APIs and websites, trying to find readily available data. We first found the crime-data explorer.fr.cloud.gov API that broke down the crime agencies by state. What this was able to show us was the granular detail of the agency name, state, and ORI for each crime agency. We knew the next big goal was to try to find other data that would have some similarities to the crime data that we could join. Further research landed us on a website with tables for the annual median household income by state. In addition, we referred to the national incident-based reporting system to bring detailed, incident-based data for our crime data. Because our data was expansive, and in some cases not complete for all years, our team decided to focus on the years from 2017 to 2020 and only the state of Georgia.
+
 ### Transform: explains what data clearing or transformation was required at a professional level
 ### Load: explains the final database, tables/collections, and why the topic was chosen at a professional level
-To create the database, we had to identify and relate the columns from the Crime Data and Median House Income Data.
+To create the Quick DBD, we had to identify and relate the columns from the Crime Data and Median House Income Data.
 
 <img src = "resources/Postgesql_erd.PNG" width = "450">
 
 Finally, we had to build SQL Database using PostgreSQL, import data, and then execute table joins via query.
 
-[Placeholder for image]
+<img src = "resources/Postgesql_query.PNG" width = "450">
 
 ## Analysis
 ### The Index Page with the summary of crime data and median household income data
