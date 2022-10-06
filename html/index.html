@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="bootstrap.css" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navigation Bar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="graph.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="map.html">Leaflet</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of navbar -->
+
+    <!-- Start of container -->
+    <div style="text-align: center;">
+    <br>
+        <a href= "map.html"><img src="GA_county_map.png" width="600" height= "550" alt="" class ="centerImage"></a>
+    </br>
+    </div>
+    <!-- below is left side -->
+    <div class="container">
+      <br>
+      <section class="row">
+        <!-- left side -->
+        <div class="col-md-8 divbdy">
+          <article class="description-content">
+          <br>
+          <h1 class="description-header">Overview: </h1>
+          <h5>
+            Georgia has been in the news a lot in the last few years especially due to the recent up surge of crimes. 
+            As some of us are residents of Georgia, we are aware that most of these crimes are confined to certain 
+            counties of Georgia but to truly understand the true nature of these crimes, we decided to dig deeper 
+            into the Georgia county data available from our data sources by looking at the average income of 
+            each of the counties and see its correlation with crime.
+          </h5>
+          <h5>
+            With ORI (Originating Agency Identifier) of the Georgia law enforcement system, 
+            we will be able to extract different crime data from 2017 to 2020 inside Georgia. 
+            By utilizing different data sources, Jupyter notebook, Leaflet, Plotly, Postgres SQL, 
+            HTML/CSS, JS, and LoDash (the unintroduced JS library), we analyze the GA county 
+            crimes and the median household income to show:
+          </h5>
+          <h5>
+            <p class="text-info">* Index page with the summary of crime data and household income data</p>
+            <p class="text-info">* Dashboard with bar charts for each year (2017-2020)</p>
+            <p class="text-info">* Dashboard with line charts to show trend of Median Income of County and Total Crime</p>
+            <p class="text-info">* Leaflet page with the map that has median household income data and crime data with filtered checkboxes</p>
+          </h5>
+        </article>
+        </div>
+
+    <!-- On the right side, will stay the same except below -->
+    <div class="col-md-4">
+      <section id="imageNav-area">
+        <a href='graph.html'><h2 class="imageNav-header">Visualizations</h2></a>
+          <hr>
+          <div class="row">
+              <div class="col-3 col-md-6">
+                <img src="Atlanta_Barchart_2020.png" alt="Total Crime per Category" width ="200" height="200">
+              </div>
+             
+              <div class="col-3 col-md-6">
+                <img src="Median_Income.png" alt="Median Income of Location" width ="200" height="200">
+              </div>
+          
+              <div class="col-3 col-md-6">
+                <img src="Total_Crime.png" alt="Total Crime each year" width ="200" height="200">
+              </div>
+
+          </div>
+      </div>
+  </div>            
+</div>    
+
+</section>
+    <!-- End of container -->
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center">
+        <b>&copy; Copyright Coding Bootcamp 2021</b>
+      </p>
+    </footer>
+    <!-- End of footer -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
