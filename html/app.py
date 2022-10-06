@@ -38,10 +38,8 @@ def welcome():
     return (
         f"Available Routes:<br/>"
         f"Crime Agency Data: /api/agency<br/>"
-        f"Median Income by County Data: /api/income<br/>"
-        f"Crime Data by county: /api/CountyCrimes<br/>"
-        f"Agency Locations: /api/agencyLocation<br/>"
-        f"Offenses: /api/Offense<br/>"
+        f"Median Income by County Data: /api/Income<br/>"
+        f"Crime Data: /api/crime<br/>"
     )
 
 
@@ -49,7 +47,7 @@ def welcome():
 def agency():
     # session = Session(engine)
     x=[]
-    results = cursor.execute('SELECT public."Agency".agency_name, CAST(sum(public."Offense".cleared) as bigint), CAST(sum(public."Offense".actual) as bigint) FROM public."Agency" Left Join public."Offense" on public."Offense".ori = public."Agency".ori group by public."Agency".agency_name;')
+    results = cursor.execute('SELECT public."Agency".agency_name, CAST(sum(public."Offense".cleared) as bigint), CAST(sum(public."Offense".actual) as bigint) FROM public."Agency" Left Join public."Offense" on public."Offense".ori = public."Agency".ori where public."Offense".actual is not null group by public."Agency".agency_name;')
     rows = cursor.fetchall()
     # results = pd.read_sql('SELECT * FROM public."Agency"', conn)
     for row in rows:

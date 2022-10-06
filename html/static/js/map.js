@@ -134,6 +134,7 @@ d3.json('http://127.0.0.1:5000/api/agency').then(
         crimedct.push(x)
 
       }
+
     }
 
 d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
@@ -184,15 +185,15 @@ d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
         countycolor = "#FF0000";
 
       var cty = income[i].County_Name;
-
+      var inc = income[i].Percapita_Income;
       cty = _.toUpper(cty);
-      x = { cty, countycolor };
+      x = { cty, countycolor, inc };
       combined.push(x);
     }
 
     d3.json('http://127.0.0.1:5000/api/CountyCrimes').then(
       function(crimelocation){
-
+        
         cldict = []
 
         for (i = 0; i < crimelocation.length; i++){
@@ -203,12 +204,12 @@ d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
           z = {countloc, countclear, countactual, countpercent}
 
           cldict.push(z)
-        
+          
         }
 
+        
 
-
-    d3.json("../../../data/GA-13-georgia-counties.json").then(function (data) {
+    d3.json("../data/GA-13-georgia-counties.json").then(function (data) {
       var geojson = topojson.feature(
         data,
         data.objects.cb_2015_georgia_county_20m
@@ -241,7 +242,7 @@ d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
                 fillOpacity: 0.85,
               });
             },
-
+            
             mouseout: function (event) {
               layer = event.target;
               layer.setStyle({
@@ -254,9 +255,10 @@ d3.json("http://127.0.0.1:5000/api/agencyLocation").then(function (countydata) {
               //myMap.fitBounds(layer.getBounds());
             },
           });
-       
+          
+
           if (_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}) >= 0)
-            layer.bindPopup(`<h2>${Feature.properties.NAME} County </h2> <hr> <p>Total Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countactual)}</p>
+            layer.bindPopup(`<h2>${Feature.properties.NAME} County </h2> <hr><p>2020 Median Income: $${(combined[(_.findIndex(combined, {cty: _.toUpper(Feature.properties.NAME)}))].inc)}</p> <p>Total Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countactual)}</p>
             <p>Solved Crimes: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countclear)}</p><p>Percent of Crimes Solved: ${(cldict[(_.findIndex(cldict, {countloc: _.toUpper(Feature.properties.NAME),}))].countpercent)}%`);
           else
             layer.bindPopup(`${Feature.properties.NAME} County <hr> `);
