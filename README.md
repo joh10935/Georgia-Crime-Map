@@ -46,7 +46,7 @@ Finally, we had to build SQL Database using PostgreSQL, import data, and then ex
 ### The Index Page with the summary of the project
 Below, our team made a landing page, explaining the overview and showing the visualizations, which will be explained later.
 
-<img src = "resources/Index Page.png" width = "550">
+<img src = "resources/Index Page.png" width = "750">
 
 ### Data Dashboard Selection
 Our dropdowns allow for users to choose any particular GA Law Enforcement Agency and a year between 2017-2020. For our project, we chose the Atlanta Police Department.
@@ -94,15 +94,23 @@ Listed below is the map layout with layers describing groups of features, which 
 
 <img src = "resources/Leaflet Page.png" width = "700">
 
+If a certain department is clicked, in this case we chose Woodstock Police Department, provided below is the following information:
+
+<img src = "resources/Department Click.png" width = "250">
+
+Then, when a certain county is clicked, in this case we chose Forsyth County, listed below is the following information:
+
+<img src = "resources/County Click.png" width = "250">
+
 ## Conclusions
 ### Data Dashboard Trends
 * Based on the line charts above, the most common trend we see from 2017-2020 is that the total number of crime offenses reported had significantly decreased while the median income over the years has steadily increased. Assuming from our observations, the pandemic lockdowns possibly tied to lower crime for the year 2020 in many places, not just Georgia, because of the stay-at-home policies put into effect.
 * With the data gathered, we cannot correlate higher median income to lower crime rate due to outliers, such as the pandemic and the US inflation rate. To have a more convincing trend, we need more data that included pre and post pandemic years, as well as population information for each county.
 
 ### Leaflet Data Map Trends
-* Clearance rates do not follow evenly with median income. As median income increases, we either see clearance rate percentages neither increase nor decrease.
+* Solved rates do not follow evenly with median income. As median income increases, we either see solved rate percentages neither increase nor decrease.
 * Population centers create more consistent data. Departments with nulls are less common in major metropolitan areas while rural areas show more departments with null values.
-* Clearance rates get worse around higher populations. Basically, more crimes committed create a lower clearance rate.
+* Solved rates get worse around higher populations. Basically, more crimes committed create a lower solved rate.
 
 
 
