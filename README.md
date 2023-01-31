@@ -1,4 +1,4 @@
-# Project-Group-D
+# Georgia Crime Statistics Interactive Map
 ## Group Participants
 * Joe Johnson
 * Jenny Bedwell
